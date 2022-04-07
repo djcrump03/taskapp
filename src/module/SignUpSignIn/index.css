@@ -1,0 +1,82 @@
+.innerSignUpSection from {background: #fff;}
+
+.innerSignUpSection form {
+    background: #7272723b;
+    max-width: 500px;
+    margin: auto;
+    padding: 27px 32px;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    margin-top: 87px;
+    margin-bottom: 87px;
+    border-radius: 11px;
+}
+
+.innerSignUpSection form h2 {margin-top: 0;color: #fff;font-weight: 500;font-size: 34px;}
+
+.innerSignUpSection form input:not([type=submit]) {
+    width: 100%;
+    padding: 11px 20px;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 19px;
+    background: transparent;
+    border: 1px solid #ffffff8f;
+    color: #fff;
+}
+
+.input_field {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.innerSignUpSection form input:not([type=submit])::placeholder {
+    color: #ffffffa6;
+}
+
+.input_field input[type=submit] {
+    background: #fff;
+    border: 1px solid #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 16px 48px 16px;
+    border-radius: 100px;
+}
+
+.input_field input[type=submit]:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.innerSignUpSection form input:not([type=submit]):focus {
+    outline: none!important;
+    background: #ffffff80;
+}
+
+p.message {
+    color: red;
+}
+
+p.newAccountNumber a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+p.newAccountNumber {
+    color: #fff;
+    margin-top: 9px;
+    display: inline-block;
+}
+
+.signupSection.login {
+    padding-top: 61px;
+}
+
+@media (max-width:767px) {
+    .innerSignUpSection {
+        padding: 0px 23px;
+    }
+}

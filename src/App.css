@@ -1,0 +1,499 @@
+.App {
+  text-align: center;
+}
+
+.App {
+  padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.updatesection:not(.update-enable) {
+  display: none;
+}
+
+
+body {
+  background: #151515;
+}
+
+.todoItem {
+  background: #222222;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  border-radius: 9px;
+}
+
+.todoItem hr {
+  display: none;
+}
+
+.todoItem p {
+  margin: 0;
+}
+
+.addToComplete {
+  text-decoration: line-through;
+}
+
+p.addToComplete {
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+p.addToComplete:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+}
+
+.todoItem.completed p.addToComplete:before {
+  opacity: 1;
+} 
+
+
+.todoItem {
+  position: relative;
+}
+
+p.delete {
+  position: absolute;
+  right: 18px;
+  width: 30px;
+  height: 30px;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  top: 13px;
+  cursor: pointer;
+}
+
+p.upadate {
+  position: absolute;
+  right: 61px;
+  width: 30px;
+  height: 30px;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  top: 13px;
+  padding-top: 4px;
+  box-sizing: border-box;
+}
+
+p.title {
+  padding-left: 18px;
+}
+
+.todoItem.completed p.title {
+  text-decoration: line-through;
+  color: #ffffff8f;
+}
+
+.todoItem.completed {
+  opacity: 0.5;
+}
+
+
+.addTOTaskForm h2 {
+  color: #788cde;
+  margin-top: 4px;
+  font-size: 38px;
+}
+
+.addTOTaskForm form {
+  display: grid;
+  grid-template-columns: 20px auto 120px;
+  background: #4c6fff;
+  padding: 18px 49px;
+  margin-bottom: 19px;
+  border-radius: 10px;
+  width: calc(100% - 22px);
+  max-width: 500px;
+  margin: auto;
+}
+
+.addTOTaskForm input[type=text] {
+  width: calc(100% - 67px);
+  padding: 13px 23px;
+  background: #c3ddf7;
+  border: navajowhite;
+  border-radius: 5px;
+  color: black;
+  font-size: 17px;
+}
+
+.addTOTaskForm input[type=submit] {
+  cursor: pointer;
+  background: #202020;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 10px;
+  background: black;
+  margin-left: -4px;
+  text-transform: uppercase;
+}
+
+.addTOTaskForm h2 {
+  color: #788cde;
+  margin-top: 4px;
+  font-size: 38px;
+}
+
+.addTOTaskForm form {
+  display: grid;
+  grid-template-columns: 20px auto 120px;
+  background: #4c6fff;
+  padding: 18px 49px;
+  margin-bottom: 19px;
+  border-radius: 10px;
+  width: calc(100% - 22px);
+  max-width: 500px;
+  margin: auto;
+}
+
+.addTOTaskForm input[type=text] {
+  padding: 13px 23px;
+  background: #c3ddf7;
+  border: navajowhite;
+  border-radius: 5px;
+  color: black;
+  font-size: 17px;
+}
+
+.addTOTaskForm input[type=submit] {
+  cursor: pointer;
+  background: #202020;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 10px;
+  background: black;
+  margin-left: -4px;
+  text-transform: uppercase;
+}
+
+.addTOTaskForm span {transform: translate(-24px, -14px) scale(3);transform-origin: top;}
+
+.addTOTaskForm form {
+  margin-bottom: 50px;
+}
+
+.UpdateSection {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #4c6fff59;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+
+.todoEditContainer.enableUpdate .UpdateSection {
+  display: block;
+}
+
+
+.UpdateSection input[type=submit] {
+  cursor: pointer;
+  background: #202020;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 6px;
+  background: black;
+  margin-left: -4px;
+  text-transform: uppercase;
+  padding: 11px 36px;
+  border: navajowhite;
+  margin: auto;
+  margin-top: 21px;
+}
+
+.UpdateSection input[type=text] {
+  padding: 13px 23px;
+  background: #c3ddf7;
+  border: navajowhite;
+  border-radius: 5px;
+  color: black;
+  font-size: 17px;
+}
+
+.UpdateSection form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 18px 42px 53px;
+  text-align: center;
+  border-radius: 27px;
+  margin-top: 11%;
+}
+
+.UpdateSection input[type=submit] {
+  cursor: pointer;
+  background: #202020;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 6px;
+  background: black;
+  margin-left: -4px;
+  text-transform: uppercase;
+  padding: 11px 36px;
+  border: navajowhite;
+  margin: auto;
+  margin-top: 21px;
+}
+
+.UpdateSection input[type=text] {
+  padding: 16px 23px;
+    background: #c3ddf7;
+    border: navajowhite;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    width: 257px;
+}
+
+.UpdateSection form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 18px 42px 53px;
+  text-align: center;
+  border-radius: 27px;
+  margin-top: 11%;
+}
+
+.closeButtons {display: flex;align-items: center;justify-content: center;}
+
+button.closebtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0;
+  border: none;
+  background: transparent;
+}
+
+form {
+  position: relative;
+}
+
+button.closebtn:before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 26px;
+  top: 29px;
+}
+
+button.closebtn:after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: 26px;
+  top: 29px;
+}
+
+
+body{
+  background: url(https://miro.medium.com/max/1200/1*zmjE6IeltbyiS4Iu91HJyw.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body:after {
+  background: #030303db;
+  height: 100vh;
+  content: "";
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+body {
+  position: relative;
+}
+
+div#root {
+  position: relative;
+  z-index: 5;
+}
+
+.todoItem {
+  background: #4c6fff6b;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  border-radius: 9px;
+}
+
+
+@media (min-width:970px) {
+  .inner_todo {
+    max-width: 940px;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width:970px) {
+  .inner_todo {
+    padding: 35px 41px;
+  }
+}
+
+@media (max-width:767px) {
+  .addTOTaskForm form {
+    display: flex;
+    flex-direction: column;
+  }
+  .addTOTaskForm form {
+    padding: 13px 14px;
+    box-sizing: border-box;
+  }
+  .addTOTaskForm span{
+    display: none;
+  }
+  .addTOTaskForm input[type=text] {
+    width: calc(100% - 0px);
+    max-width: 197px;
+    margin: auto;
+  }
+  .addTOTaskForm input[type=submit] {
+    padding: 14px 0px;
+    margin-top:10px;
+  }
+}
+
+
+.reminderFiled input {
+  padding: 13px 23px;
+  background: #c3ddf7;
+  border: navajowhite;
+  border-radius: 5px;
+  color: black;
+  font-size: 17px;
+  margin-top: 17px;
+  margin-bottom: 15px;
+}
+
+.reminderEnable {
+  font-size: 16px;
+}
+
+.reminderEnable input {
+  display: none;
+}
+
+.reminderEnable label {
+  position: relative;
+  cursor: pointer;
+}
+
+.reminderEnable label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 3px solid;
+  position: absolute;
+  left: -37px;
+  border-radius: 5px;
+  border-color: #3a4ea5;
+}
+
+.reminderEnable label:after {
+  content: "";
+  width: 6px;
+  height: 14px;
+  position: absolute;
+  border: 3px solid;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(45deg);
+  left: -27px;
+  top: 3px;
+  opacity: 0;
+}
+
+.reminderEnable input:checked + label:after {
+  OPACITY: 1;
+}
